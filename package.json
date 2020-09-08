@@ -1,19 +1,29 @@
 {
-  "name": "prideandbloom",
-  "version": "1.0.0",
-  "description": "A website for a fine dining restaurant",
-  "main": "index.html",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/3103ski/prideAndBloom.git"
-  },
-  "author": "Bryan Jastrzembski",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/3103ski/prideAndBloom/issues"
-  },
-  "homepage": "https://github.com/3103ski/prideAndBloom#readme"
+	"name": "prideandbloom",
+	"version": "1.0.0",
+	"description": "A website for a fine dining restaurant",
+	"main": "index.html",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"lite": "lite-server",
+		"start": "npm run lite"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+ssh://git@github.com/3103ski/prideAndBloom.git"
+	},
+	"author": "Bryan Jastrzembski",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/3103ski/prideAndBloom/issues"
+	},
+	"homepage": "https://github.com/3103ski/prideAndBloom#readme",
+	"devDependencies": {
+		"liteserver": "^0.3.0"
+	},
+	"dependencies": {
+		"bootstrap": "^4.5.0",
+		"jquery": "^3.5.1",
+		"popper.js": "^1.16.1"
+	}
 }
