@@ -1,0 +1,128 @@
+/* ------- */
+/* GLOBAL  */
+/* ------- */
+
+$primary-color-dark: #7c8079;
+$primary-color-light: rgba(238, 240, 233, 0.9);
+$btn-primary-color: #f8fff2;
+
+* {
+	font-family: 'Poppins', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	color: $primary-color-dark;
+	letter-spacing: 0.1rem;
+}
+
+.row-content {
+	padding: 40px 15px;
+	min-height: 400px;
+	.col-content-card {
+		background-color: $primary-color-light;
+	}
+}
+
+.res-btn {
+	// width: 100%;
+	letter-spacing: 0.25rem;
+	border: solid 2px $primary-color-dark;
+	color: $primary-color-dark;
+	padding: 0.3rem 0.8rem;
+}
+
+/* ----------------- */
+/*  UTILITY CLASSES  */
+/* ----------------- */
+
+.pill {
+	border-radius: 40px;
+}
+
+.fontSatisfy {
+	font-family: 'Satisfy', cursive;
+}
+
+.mr-20 {
+	margin-right: 20% !important;
+}
+
+/* -------------------- */
+/*  Bootstrap Override  */
+/* -------------------- */
+
+.btn-primary {
+	background-color: $btn-primary-color;
+	border-color: $btn-primary-color;
+	color: $primary-color-dark;
+	padding: 0.5rem 1.2rem;
+}
+
+/* --------- */
+/* HOME PAGE */
+/* --------- */
+
+.homeJumbo {
+	background-image: url('/assets/pic_cuttingBoard.jpg');
+	background-size: cover;
+	height: 100vh;
+	margin: 0;
+	h1 {
+		letter-spacing: 0.2rem;
+		font-size: 4rem;
+		margin: 0.4rem;
+
+		span {
+			font-weight: 200;
+		}
+	}
+	p {
+		font-size: 0.8rem;
+	}
+}
+
+.banner {
+	background-image: url('/assets/pic_banner.jpg');
+	background-size: cover;
+	height: 40vh;
+}
+
+.quote {
+	letter-spacing: 0.25rem;
+	line-height: 3.4rem;
+}
+
+.pic-right {
+	padding: 0;
+	margin-left: -25px;
+	z-index: -1;
+}
+
+.pic-left {
+	padding: 0;
+	margin-right: -20px;
+	z-index: -1;
+}
+
+/* --------- */
+/*   FOOTER  */
+/* --------- */
+
+footer {
+	height: 280px;
+	background-color: $primary-color-light;
+	.footer-row {
+		max-width: 1200px;
+
+		i {
+			color: $primary-color-dark;
+			font-size: 2.5rem;
+		}
+	}
+}

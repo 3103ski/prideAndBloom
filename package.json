@@ -4,9 +4,17 @@
 	"description": "A website for a fine dining restaurant",
 	"main": "index.html",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
 		"lite": "lite-server",
-		"start": "npm run lite"
+		"copyfiles": "copyfiles -f node_modules/@fortawesome/fontawesome-free/webfonts/* dist/fonts",
+		"imagemin": "imagemin img/* -o dist/img",
+		"usemin": "usemin index.html -d dist --htmlmin -o dist/index.html",
+		"clean": "rimraf dist",
+		"scss": "node-sass -o css/ sass/",
+		"watch:scss": "onchange 'sass/*.scss' -- npm run scss",
+		"watch:all": "parallelshell 'npm run watch:scss' 'npm run lite' ",
+		"start": "npm run watch:all",
+		"build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin",
+		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"repository": {
 		"type": "git",
@@ -19,9 +27,17 @@
 	},
 	"homepage": "https://github.com/3103ski/prideAndBloom#readme",
 	"devDependencies": {
-		"liteserver": "^0.3.0"
+		"copyfiles": "^2.2.0",
+		"imagemin-cli": "^5.1.0",
+		"lite-server": "^2.5.4",
+		"node-sass": "^4.14.1",
+		"onchange": "^7.0.0",
+		"parallelshell": "^3.0.1",
+		"rimraf": "^3.0.2",
+		"usemin-cli": "^0.6.0"
 	},
 	"dependencies": {
+		"@fortawesome/fontawesome-free": "^5.14.0",
 		"bootstrap": "^4.5.0",
 		"jquery": "^3.5.1",
 		"popper.js": "^1.16.1"
