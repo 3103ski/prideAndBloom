@@ -25,22 +25,25 @@
 
 	<body>
 		<!-- NAVIGATION -->
+		<a href="#" class="mx-auto res-btn fixed-res">MAKE <strong>RESERVATIONS</strong></a>
 
 		<!-- LANDING JUMBOTRON -->
 		<header class="jumbotron jumbotron-fluid d-flex homeJumbo">
+			<div class="jumbotron-filter"></div>
 			<div class="container align-self-center">
 				<div class="row">
 					<div class="col text-center">
-						<h1><span>Pride &</span> Bloom</h1>
-						<p>A FINE DINING EXPERIENCE</p>
+						<h1>Pride &<span> Bloom</span></h1>
+						<p>- A FINE DINING EXPERIENCE -</p>
 					</div>
 				</div>
 			</div>
 		</header>
+
 		<!-- IDENTITY CONTAINER -->
 		<div class="container">
 			<div class="row row-content">
-				<div class="col col-12 col-md-5 align-self-center col-content-card p-2 p-lg-5 text-right">
+				<div class="col col-12 col-md-5 align-self-center col-content-card p-2 p-lg-5 text-right left-round">
 					<h3 class="w-100">Take Pride & Bloom</h3>
 					<p>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem aspernatur eaque, officia, neque expedita pariatur numquam id corporis sequi fugit minus temporibus eos cupiditate perspiciatis
@@ -49,7 +52,7 @@
 					<button class="btn btn-primary pill">Get To Know Us</button>
 				</div>
 				<div class="col col-12 col-sm-7 pic-right align-items-center d-flex">
-					<img class="img-fluid" src="/assets/pic_chef_ls.jpg" alt="" />
+					<img class="img-fluid right-round" src="/assets/pic_chef_ls.jpg" alt="" />
 				</div>
 			</div>
 		</div>
@@ -75,15 +78,17 @@
 			<div class="row">
 				<div class="row row-content">
 					<div class="col col-12 col-sm-7 pic-left d-flex align-items-center">
-						<img class="img-fluid" src="/assets/pic_food1.jpg" alt="" />
+						<img class="img-fluid left-round" src="/assets/pic_food1.jpg" alt="" />
 					</div>
-					<div class="col col-12 col-sm-5 align-self-center col-content-card p-5 text-right">
-						<h3 class="w-100">Take Pride & Bloom</h3>
+					<div class="col col-12 col-sm-5 align-self-center col-content-card p-5 text-left right-round">
+						<h3 class="w-100">Best Rated Menu In LA</h3>
 						<p>
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem aspernatur eaque, officia, neque expedita pariatur numquam id corporis sequi fugit minus temporibus eos cupiditate
 							perspiciatis dolorem, tenetur deleniti excepturi iusto!
 						</p>
-						<button class="btn btn-primary pill">Get To Know Us</button>
+						<a href="/menu.html">
+							<button class="btn btn-primary pill">EXPLORE MENU</button>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -91,11 +96,11 @@
 
 		<!-- FOOTER -->
 
-		<footer class="container-fluid">
-			<div class="row footer-row mx-auto d-flex align-items-center h-100">
+		<footer class="container-fluid tall-footer">
+			<div class="row footer-row mx-auto d-flex align-items-center h-100 text-center">
 				<div class="col col-12 col-md-4 d-flex justify-content-center flex-column">
 					<div class="row">
-						<a href="#" class="mx-auto fotter-res res-btn">MAKE <strong>RESERVATION</strong></a>
+						<a href="#" class="mx-auto fotter-res res-btn">MAKE <strong>RESERVATIONS</strong></a>
 					</div>
 					<div class="row d-flex m-2">
 						<i class="fab fa-twitter ml-auto"></i>
@@ -103,8 +108,19 @@
 						<i class="fab fa-instagram-square mr-auto"></i>
 					</div>
 				</div>
-				<div class="col col-12 col-md-4"></div>
-				<div class="col col-12 col-md-4"></div>
+				<div class="col col-12 col-md-4">
+					<h2>Kitchen Hours</h2>
+					<p>Monday-Thursday: 3pm - 11pm</p>
+					<p>Friday: 3pm - 12:30am</p>
+					<p>Saturday: 10am - 12am</p>
+					<p>Sunday: 10am - 8pm</p>
+				</div>
+				<div class="col col-12 col-md-4">
+					<h2>Location</h2>
+					<p>97 River Street</p>
+					<p>Holly Springs, NC 27540</p>
+					<a href="#" class="f-menu-link">Menu</a>
+				</div>
 			</div>
 		</footer>
 
@@ -112,5 +128,6 @@
 		<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
 		<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
 		<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="js/customJs.js"></script>
 	</body>
 </html>

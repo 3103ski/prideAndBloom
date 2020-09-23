@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>P&B Menu</title>
+
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+
+		<!-- Icons -->
+		<link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css" />
+		<link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/webfonts/" />
+
+		<!-- Google Fonts -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet" />
+
+		<!-- Local Styles -->
+		<link rel="stylesheet" href="css/styles.css" />
+	</head>
+	<body>
+		<!-- NAVIGATION -->
+		<nav class="navbar navbar-light bg-light fixed-top">
+			<a href="#" class="mx-auto res-btn">MAKE <strong>RESERVATIONS</strong></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+				<!-- <span class="navbar-toggler-icon"></span> -->
+				<i class="fas fa-bars"></i>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+				<div class="navbar-nav">
+					<a class="nav-link" href="/index.html">Home <span class="sr-only">(current)</span></a>
+					<a class="nav-link active" href="/menu.html">Explore Menu <span class="sr-only">(current)</span></a>
+					<a class="nav-link" href="#">About Us <span class="sr-only">(current)</span></a>
+				</div>
+			</div>
+		</nav>
+
+		<div class="menu-container">
+			<div class="pic-menu-selctor see-appetizer">
+				<h2>Appetizers</h2>
+				<h6 class="menu-back app-back"><i class="fas fa-arrow-circle-left"></i> Go Back</h6>
+			</div>
+			<div class="appetizer-menu menu-element-hidden food-menu"></div>
+
+			<div class="pic-menu-selctor see-brunch">
+				<h2>Brunch</h2>
+				<h6 class="menu-back brunch-back"><i class="fas fa-arrow-circle-left"></i> Go Back</h6>
+			</div>
+			<div class="brunch-menu menu-element-hidden food-menu"></div>
+
+			<div class="pic-menu-selctor see-dinner">
+				<h2>Dinner</h2>
+				<h6 class="menu-back dinner-back"><i class="fas fa-arrow-circle-left"></i> Go Back</h6>
+			</div>
+			<div class="dinner-menu menu-element-hidden food-menu"></div>
+
+			<div class="pic-menu-selctor see-drinks">
+				<h2>Drinks</h2>
+				<h6 class="menu-back drinks-back"><i class="fas fa-arrow-circle-left"></i> Go Back</h6>
+			</div>
+			<div class="drink-menu menu-element-hidden food-menu"></div>
+		</div>
+
+		<footer class="short-footer d-flex align-items-center justify-content-center">
+			<div class="social-icons">
+				<i class="my-auto fab fa-twitter ml-auto"></i>
+				<i class="my-auto fab fa-facebook-square mx-3"></i>
+				<i class="my-auto fab fa-instagram-square mr-auto"></i>
+			</div>
+		</footer>
+
+		<!-- SCRIPTS -->
+		<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+		<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+		<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="js/customJs.js"></script>
+	</body>
+</html>
