@@ -85,7 +85,16 @@ p {
   background-color: #f8fff2;
   border-color: #f8fff2;
   color: #7c8079;
-  padding: 0.5rem 1.2rem; }
+  padding: 0.5rem 1.2rem;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.05);
+  transition-timing-function: ease-in-out;
+  transition: 0.275s; }
+
+.btn-primary:hover {
+  background-color: #7c8079;
+  border-color: #7c8079;
+  color: rgba(238, 240, 233, 0.9);
+  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.15); }
 
 .navbar-toggler {
   border-radius: 25px;
@@ -109,18 +118,22 @@ p {
     font-size: 1rem;
     font-weight: 300;
     letter-spacing: 0.2rem; }
-  .homeJumbo .jumbotron-filter {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(247, 255, 240, 0.5); }
+
+.light-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(247, 255, 240, 0.404); }
 
 .banner {
   background-image: url("/assets/pic_banner.jpg");
   background-size: cover;
-  height: 40vh; }
+  background-position: center;
+  height: 60vh;
+  min-height: 300px;
+  position: relative; }
 
 .quote {
   letter-spacing: 0.25rem;
@@ -157,8 +170,8 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: start;
-    transition: 0.35s;
-    transition-timing-function: ease-in; }
+    transition: 0.25s;
+    transition-timing-function: ease-out; }
     .menu-container .pic-menu-selctor h2,
     .menu-container .pic-menu-selctor .menu-back {
       background-color: rgba(255, 255, 255, 0.8);
@@ -170,7 +183,7 @@ p {
       display: flex;
       align-items: center;
       margin-top: 50px;
-      transition: 0.35s;
+      transition: 0.25s;
       opacity: 0%; }
       .menu-container .pic-menu-selctor .menu-back i {
         font-size: 0.75rem;
@@ -186,8 +199,32 @@ p {
     height: 100%;
     width: 0%;
     position: relative;
-    transition: 0.35s;
-    transition-timing-function: ease-in; }
+    transition: 0.25s;
+    transition-timing-function: ease-out; }
+    .menu-container .food-menu .item-container {
+      min-width: 75vw; }
+      .menu-container .food-menu .item-container .menu-title {
+        width: 80%;
+        margin: 0 auto 0 auto; }
+        .menu-container .food-menu .item-container .menu-title h1 {
+          color: white; }
+        .menu-container .food-menu .item-container .menu-title .title-underline {
+          background-color: white;
+          height: 2px;
+          width: 90%;
+          margin-left: auto; }
+      .menu-container .food-menu .item-container .menu-item {
+        margin-top: 1.3rem; }
+        .menu-container .food-menu .item-container .menu-item h6,
+        .menu-container .food-menu .item-container .menu-item p {
+          color: white;
+          margin-bottom: 0; }
+        .menu-container .food-menu .item-container .menu-item h6 {
+          font-size: 1.1rem; }
+        .menu-container .food-menu .item-container .menu-item p {
+          font-size: 0.7rem; }
+        .menu-container .food-menu .item-container .menu-item .item-price {
+          margin-left: 10px; }
   .menu-container .see-appetizer {
     background-image: url("/assets/pic_appetizers.jpg"); }
   .menu-container .see-brunch {

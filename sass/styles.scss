@@ -3,16 +3,19 @@
 /* ------- */
 
 // colors
-$primary-color-dark: #7c8079;
+$primary-color-dark: rgb(124, 128, 121);
+$secondary-color-dark: rgb(92, 125, 102);
 $primary-color-light: rgba(238, 240, 233, 0.9);
-$btn-primary-color: #f8fff2;
+$btn-primary-color: rgb(248, 255, 242);
+$light-overlay: rgba(247, 255, 240, 0.404);
 
 // cards
 $card-radius: 20px;
 
 // menu
-$menu-transition: 0.35s;
-$menu-timing-function: ease-in;
+$menu-transition: 0.25s;
+$menu-item-show-delay: 0.3s;
+$menu-timing-function: ease-out;
 
 * {
 	font-family: 'Poppins', sans-serif;
@@ -115,6 +118,16 @@ p {
 	border-color: $btn-primary-color;
 	color: $primary-color-dark;
 	padding: 0.5rem 1.2rem;
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.05);
+	transition-timing-function: ease-in-out;
+	transition: 0.275s;
+}
+
+.btn-primary:hover {
+	background-color: $primary-color-dark;
+	border-color: $primary-color-dark;
+	color: $primary-color-light;
+	box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.15);
 }
 
 .navbar-toggler {
@@ -145,20 +158,23 @@ p {
 		font-weight: 300;
 		letter-spacing: 0.2rem;
 	}
-	.jumbotron-filter {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-color: rgba(247, 255, 240, 0.5);
-	}
+}
+.light-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: $light-overlay;
 }
 
 .banner {
 	background-image: url('/assets/pic_banner.jpg');
 	background-size: cover;
-	height: 40vh;
+	background-position: center;
+	height: 60vh;
+	min-height: 300px;
+	position: relative;
 }
 
 .quote {
@@ -244,6 +260,41 @@ p {
 		position: relative;
 		transition: $menu-transition;
 		transition-timing-function: $menu-timing-function;
+
+		.item-container {
+			min-width: 75vw;
+
+			.menu-title {
+				width: 80%;
+				margin: 0 auto 0 auto;
+				h1 {
+					color: white;
+				}
+				.title-underline {
+					background-color: white;
+					height: 2px;
+					width: 90%;
+					margin-left: auto;
+				}
+			}
+			.menu-item {
+				margin-top: 1.3rem;
+				h6,
+				p {
+					color: white;
+					margin-bottom: 0;
+				}
+				h6 {
+					font-size: 1.1rem;
+				}
+				p {
+					font-size: 0.7rem;
+				}
+				.item-price {
+					margin-left: 10px;
+				}
+			}
+		}
 	}
 
 	// Menu Buttons
