@@ -3,6 +3,9 @@
 	"version": "1.0.0",
 	"description": "A website for a fine dining restaurant",
 	"main": "index.html",
+	"engines": {
+		"node": "12.9.0"
+	},
 	"scripts": {
 		"lite": "lite-server",
 		"copyfiles": "copyfiles -f node_modules/@fortawesome/fontawesome-free/webfonts/* dist/fonts",
