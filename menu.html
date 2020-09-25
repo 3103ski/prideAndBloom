@@ -23,9 +23,12 @@
 		<link rel="stylesheet" href="css/styles.css" />
 	</head>
 	<body>
+		<!-- ---------- -->
 		<!-- NAVIGATION -->
-		<nav class="navbar navbar-light bg-light fixed-top">
-			<a href="#" class="mx-auto res-btn">MAKE <strong>RESERVATIONS</strong></a>
+		<!-- ---------- -->
+		<nav class="navbar navbar-light bg-light fixed-top pill-nav">
+			<a href="/index.html" class="ml-2"><img id="nav-logo" src="/assets/logo-png2.png" alt="" /></a>
+			<a data-toggle="modal" data-target="#reservationModal" class="mx-auto res-btn">MAKE <strong>RESERVATIONS</strong></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 				<i class="fas fa-bars"></i>
 			</button>
@@ -33,16 +36,45 @@
 				<div class="navbar-nav">
 					<a class="nav-link" href="/index.html">Home <span class="sr-only">(current)</span></a>
 					<a class="nav-link active" href="/menu.html">Explore Menu <span class="sr-only">(current)</span></a>
-					<a class="nav-link" href="#">About Us <span class="sr-only">(current)</span></a>
+					<a class="nav-link" href="/about.html">About Us <span class="sr-only">(current)</span></a>
 				</div>
 			</div>
 		</nav>
-
-		<div class="menu-container">
-			<div class="pic-menu-selctor see-appetizer">
-				<h2>Appetizers</h2>
-				<h6 class="menu-back app-back"><i class="fas fa-arrow-circle-left"></i> Go Back</h6>
+		<!-- Reservation Modal -->
+		<div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Make Reservation</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">...</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Save changes</button>
+					</div>
+				</div>
 			</div>
+		</div>
+
+		<!-- -------------- -->
+		<!-- MENU CONTAINER -->
+		<!-- -------------- -->
+		<div class="menu-container">
+			<!-- ************** -->
+			<!-- APPETIZER MENU -->
+			<!-- ************** -->
+
+			<!-- button -->
+			<div class="pic-menu-selctor see-appetizer">
+				<div class="pic-overlay"></div>
+				<h2>Appetizers</h2>
+				<i class="menu-back app-back fas fa-arrow-circle-left"></i>
+			</div>
+
+			<!-- menu __ no width by default -->
 			<div class="appetizer-menu menu-element-hidden food-menu d-flex align-items-center">
 				<div class="container item-container flex-column">
 					<div class="menu-title">
@@ -100,10 +132,18 @@
 				</div>
 			</div>
 
+			<!-- *********** -->
+			<!-- BRUNCH MENU -->
+			<!-- *********** -->
+
+			<!-- button -->
 			<div class="pic-menu-selctor see-brunch">
+				<div class="pic-overlay"></div>
 				<h2>Brunch</h2>
-				<h6 class="menu-back brunch-back"><i class="fas fa-arrow-circle-left"></i> Go Back</h6>
+				<i class="menu-back brunch-back fas fa-arrow-circle-left"></i>
 			</div>
+
+			<!-- menu __ no width by default -->
 			<div class="brunch-menu menu-element-hidden food-menu d-flex align-items-center">
 				<div class="container item-container flex-column">
 					<div class="menu-title">
@@ -161,10 +201,18 @@
 				</div>
 			</div>
 
+			<!-- *********** -->
+			<!-- DINNER MENU -->
+			<!-- *********** -->
+
+			<!-- button -->
 			<div class="pic-menu-selctor see-dinner">
+				<div class="pic-overlay"></div>
 				<h2>Dinner</h2>
-				<h6 class="menu-back dinner-back"><i class="fas fa-arrow-circle-left"></i> Go Back</h6>
+				<i class="menu-back dinner-back fas fa-arrow-circle-left"></i>
 			</div>
+
+			<!-- menu __ no width by default -->
 			<div class="dinner-menu menu-element-hidden food-menu d-flex align-items-center">
 				<div class="container item-container flex-column">
 					<div class="menu-title">
@@ -222,10 +270,18 @@
 				</div>
 			</div>
 
+			<!-- *********** -->
+			<!-- DRINKS MENU -->
+			<!-- *********** -->
+
+			<!-- button -->
 			<div class="pic-menu-selctor see-drinks">
+				<div class="pic-overlay"></div>
 				<h2>Drinks</h2>
-				<h6 class="menu-back drinks-back"><i class="fas fa-arrow-circle-left"></i> Go Back</h6>
+				<i class="menu-back drinks-back fas fa-arrow-circle-left"></i>
 			</div>
+
+			<!-- menu __ no width by default -->
 			<div class="drink-menu menu-element-hidden food-menu d-flex align-items-center">
 				<div class="container item-container flex-column">
 					<div class="menu-title">
@@ -284,6 +340,7 @@
 			</div>
 		</div>
 
+		<!-- FOOTER -->
 		<footer class="short-footer d-flex align-items-center justify-content-center">
 			<div class="social-icons">
 				<i class="my-auto fab fa-twitter ml-auto"></i>

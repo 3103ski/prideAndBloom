@@ -1,6 +1,6 @@
-/* ------- */
-/* GLOBAL  */
-/* ------- */
+/* ---------------- */
+/* SASS VARIABLES  */
+/* ---------------- */
 
 // colors
 $primary-color-dark: rgb(124, 128, 121);
@@ -9,13 +9,23 @@ $primary-color-light: rgba(238, 240, 233, 0.9);
 $btn-primary-color: rgb(248, 255, 242);
 $light-overlay: rgba(247, 255, 240, 0.404);
 
+// global
+$btn-transition-speed: 0.275s;
+
 // cards
 $card-radius: 20px;
 
-// menu
+// menu page
 $menu-transition: 0.25s;
-$menu-item-show-delay: 0.3s;
-$menu-timing-function: ease-out;
+$menu-timing-function: ease-in-out;
+
+// about page
+$about-page-transitions: 0.3s;
+$about-timing-function: ease-out;
+
+/* ------- */
+/* GLOBAL  */
+/* ------- */
 
 * {
 	font-family: 'Poppins', sans-serif;
@@ -45,44 +55,6 @@ p {
 	font-weight: 200;
 }
 
-.row-content {
-	padding: 40px 15px;
-	min-height: 400px;
-	.col-content-card {
-		background-color: $primary-color-light;
-	}
-}
-
-.res-btn {
-	letter-spacing: 0.25rem;
-	border: solid 2px $primary-color-dark;
-	color: $primary-color-dark;
-	font-size: 0.8rem;
-	padding: 0.3rem 0.8rem;
-}
-
-.res-btn:hover {
-	text-decoration: none;
-	color: $btn-primary-color;
-	background-color: $primary-color-dark !important;
-}
-
-.fixed-res {
-	position: fixed;
-	top: 15px;
-	left: 10px;
-	z-index: 5;
-	transition: 0.15s;
-	transition-timing-function: ease-in-out;
-	font-size: 14px;
-}
-
-.fixed-res.scrolled {
-	background-color: $primary-color-light;
-	top: 10px;
-	font-size: 11px;
-}
-
 /* ----------------- */
 /*  UTILITY CLASSES  */
 /* ----------------- */
@@ -109,6 +81,36 @@ p {
 	border-bottom-right-radius: $card-radius;
 }
 
+.row-content {
+	padding: 40px 15px;
+	min-height: 400px;
+	.col-content-card {
+		background-color: $primary-color-light;
+	}
+}
+
+.light-overlay,
+.white-overlay,
+.pic-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.light-overlay {
+	background-color: $light-overlay;
+}
+
+.white-overlay {
+	background-color: rgba(255, 255, 255, 0.8);
+}
+
+.pic-overlay {
+	background-color: rgba(248, 255, 242, 0.2);
+}
+
 /* -------------------- */
 /*  Bootstrap Override  */
 /* -------------------- */
@@ -120,19 +122,162 @@ p {
 	padding: 0.5rem 1.2rem;
 	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.05);
 	transition-timing-function: ease-in-out;
-	transition: 0.275s;
+	transition: $btn-transition-speed;
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: $primary-color-dark !important;
+		border-color: $primary-color-dark !important;
+		color: $primary-color-light !important;
+		box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.15);
+	}
 }
 
-.btn-primary:hover {
-	background-color: $primary-color-dark;
-	border-color: $primary-color-dark;
-	color: $primary-color-light;
-	box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.15);
+.bg-light {
+	background-color: $primary-color-light !important;
+}
+
+/* -------------------- */
+/*    TOP NAVIGATION    */
+/* -------------------- */
+
+#nav-logo {
+	width: 30px;
+}
+
+// res-btn styling will also apply to footer reservation button
+.res-btn {
+	letter-spacing: 0.25rem;
+	border: solid 2px $primary-color-dark;
+	color: $primary-color-dark !important;
+	font-size: 0.8rem;
+	padding: 0.3rem 0.8rem;
+	transition: $btn-transition-speed;
+
+	&:hover {
+		text-decoration: none;
+		color: $btn-primary-color !important;
+		background-color: $primary-color-dark !important;
+		cursor: pointer;
+	}
+}
+
+// fixed-res only applies to top reservation button
+.fixed-res {
+	position: fixed;
+	top: 15px;
+	left: 10px;
+	z-index: 1031;
+	transition: 0.15s;
+	transition-timing-function: ease-in-out;
+	font-size: 14px;
+}
+
+.fixed-res.scrolled {
+	background-color: $primary-color-light;
+	top: 10px;
+	font-size: 11px;
+}
+
+.pill-nav {
+	.navbar-toggler.hidden-toggler {
+		opacity: 0%;
+	}
+	.hidden-toggler.scrolled {
+		background-color: $light-overlay;
+		opacity: 100%;
+	}
+	.collapse {
+		transition: 0.1s;
+	}
+	.navbar-nav {
+		align-items: flex-start;
+		padding-top: 0.5rem;
+		.nav-link {
+			background-color: $primary-color-light;
+			padding: 0.3rem 1rem;
+			margin: 0.25rem auto;
+			border-radius: 20px;
+			letter-spacing: 0.15rem;
+			transition: 0.15s;
+			border: solid 1px $primary-color-dark;
+
+			&:hover {
+				padding: 0.3rem 1.4rem;
+				letter-spacing: 0.18rem;
+			}
+		}
+		.nav-link:hover,
+		.nav-link.active {
+			background-color: $primary-color-dark;
+			color: $primary-color-light;
+		}
+	}
 }
 
 .navbar-toggler {
+	transition: $menu-transition;
+	border-width: 2px;
 	border-radius: 25px;
 	padding: 8px 8px 8px 9px;
+	i {
+		color: $primary-color-dark;
+	}
+	border-color: $primary-color-dark !important;
+	&:focus {
+		outline: none;
+	}
+}
+
+/* ------------- */
+/*     FOOTER    */
+/* ------------- */
+
+// ABOUT PAGE has additional footer  height overrides in 'ABOUT PAGE''section below
+
+footer {
+	background-color: $primary-color-light;
+	i {
+		color: $primary-color-dark;
+	}
+}
+
+.tall-footer {
+	height: 280px;
+	.footer-row {
+		max-width: 1200px;
+		p {
+			line-height: 0.5rem;
+		}
+		i {
+			font-size: 2.5rem;
+		}
+		.f-menu-link {
+			color: $primary-color-dark;
+			font-weight: 400;
+			letter-spacing: 0.12rem;
+			border: solid 2px $primary-color-dark;
+			padding: 0.2rem 0.8rem;
+			margin-top: 0.5rem;
+			transition: $btn-transition-speed;
+			&:hover {
+				text-decoration: none;
+				background-color: $primary-color-dark;
+				color: $primary-color-light;
+			}
+		}
+	}
+}
+
+.short-footer {
+	height: 50px;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	i {
+		font-size: 1.7rem;
+	}
 }
 
 /* --------- */
@@ -158,14 +303,6 @@ p {
 		font-weight: 300;
 		letter-spacing: 0.2rem;
 	}
-}
-.light-overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: $light-overlay;
 }
 
 .banner {
@@ -201,9 +338,10 @@ p {
 .menu-container {
 	width: 100%;
 	position: relative;
-	height: calc(100vh - 100px);
+	height: calc(100vh - 106px);
 	display: flex;
-	margin-top: 50px;
+	margin-top: 56px;
+	overflow: hidden;
 
 	.pic-menu-selctor {
 		position: relative;
@@ -220,8 +358,11 @@ p {
 		transition: $menu-transition;
 		transition-timing-function: $menu-timing-function;
 
-		h2,
-		.menu-back {
+		&:hover {
+			cursor: pointer;
+		}
+
+		h2 {
 			background-color: rgba(255, 255, 255, 0.8);
 			padding: 0.4rem 1.4rem;
 		}
@@ -229,28 +370,29 @@ p {
 		h2 {
 			margin-top: 25%;
 			font-size: 1.6rem;
+			z-index: 100;
+			transition: $menu-transition;
 		}
 
 		.menu-back {
 			display: flex;
 			align-items: center;
-			margin-top: 50px;
 			transition: $menu-transition;
 			opacity: 0%;
-			i {
-				font-size: 0.75rem;
-				margin-right: 10px;
-			}
+		}
+		i {
+			margin-top: 1rem;
+			font-size: 4rem;
+			color: $primary-color-light;
+			// margin-right: 10px;
 		}
 		.show-back {
 			opacity: 100%;
+			z-index: 100;
 		}
 		.menu-back:hover {
-			margin-top: 45px;
+			margin-right: 45px;
 		}
-	}
-	.pic-menu-selctor:hover {
-		cursor: pointer;
 	}
 
 	.food-menu {
@@ -297,21 +439,21 @@ p {
 		}
 	}
 
-	// Menu Buttons
+	// FOOD MENU BUTTON BACKGROUNDS
 	.see-appetizer {
-		background-image: url('/assets/pic_appetizers.jpg');
+		background-image: url('/assets/pic_appetizer-board.jpg');
 	}
 
 	.see-brunch {
-		background-image: url('/assets/pic_brunch2.jpg');
+		background-image: url('/assets/pic_brunch-eggbennie.jpg');
 	}
 
 	.see-dinner {
-		background-image: url('/assets/pic_chops.jpg');
+		background-image: url('/assets/pic_dinner-steak.jpg');
 	}
 
 	.see-drinks {
-		background-image: url('/assets/pic_drinks2.jpg');
+		background-image: url('/assets/pic_drinks-splash.jpg');
 	}
 
 	// Menu Utility Classes
@@ -322,51 +464,97 @@ p {
 		margin-right: -25%;
 	}
 	.show-menu {
-		width: 75%;
+		width: 83%;
 	}
-}
-
-/* ------------- */
-/*  TALL FOOTER  */
-/* ------------- */
-
-footer {
-	background-color: $primary-color-light;
-	i {
-		color: $primary-color-dark;
-	}
-}
-
-.tall-footer {
-	height: 280px;
-	.footer-row {
-		max-width: 1200px;
-		p {
-			line-height: 0.5rem;
-		}
-		i {
-			font-size: 2.5rem;
-		}
-		.f-menu-link {
-			color: $primary-color-dark;
-			font-weight: 400;
-			letter-spacing: 0.12rem;
-			border: solid 2px $primary-color-dark;
-			padding: 0.2rem 0.8rem;
-		}
-
-		.f-menu-link:hover {
-			text-decoration: none;
+	.active-pic {
+		width: 17%;
+		h2 {
+			font-size: 0.8rem;
 		}
 	}
 }
 
-.short-footer {
-	height: 50px;
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	i {
-		font-size: 1.7rem;
+/* ------------ */
+/*  ABOUT PAGE  */
+/* ------------ */
+
+.about-content-container {
+	position: relative;
+	height: 90vh;
+	background-image: url('/assets/pic_group-feast.jpg');
+	background-size: cover;
+	background-position: center;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+
+	.row-content {
+		display: flex;
+		align-items: flex-end;
+		// max-width: 1200px;
+		padding: 80px 10% 0 10%;
+		.about-pic,
+		.about-content {
+			width: 50%;
+			z-index: 2;
+			transition: $about-page-transitions;
+			transition-timing-function: $about-timing-function;
+		}
+		.about-pic {
+			height: 500px;
+			background-image: url('/assets/pic_chef_ls.jpg');
+			background-size: cover;
+			background-position: center;
+			border-top-left-radius: 15px;
+			border-top-right-radius: 0px;
+			z-index: 1000;
+			position: relative;
+		}
+		.about-content {
+			height: 480px;
+			background-color: $primary-color-light;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+			border-top-left-radius: 0px;
+			border-top-right-radius: 15px;
+			.about-details {
+				width: 80%;
+				position: absolute;
+				transition: $about-page-transitions;
+			}
+			.about-chef {
+				opacity: 100%;
+				z-index: 100;
+			}
+			.about-ingredients {
+				opacity: 0;
+				z-index: 10;
+			}
+		}
+		// toggle classes
+		.move-card {
+			border-top-left-radius: 15px;
+			border-top-right-radius: 0px;
+			margin-left: -100%;
+			.about-chef {
+				opacity: 0%;
+				z-index: 10;
+			}
+			.about-ingredients {
+				opacity: 100%;
+				z-index: 100;
+			}
+		}
+		.move-pic {
+			margin-left: 50%;
+			background-image: url('/assets/pic_ingredients2.jpg');
+			border-top-left-radius: 0px;
+			border-top-right-radius: 15px;
+		}
 	}
 }
