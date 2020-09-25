@@ -59,6 +59,10 @@ button {
 	background-color: transparent !important;
 }
 
+:focus {
+	outline: none !important;
+}
+
 /* ----------------- */
 /*  UTILITY CLASSES  */
 /* ----------------- */
@@ -142,12 +146,19 @@ button {
 	transition: $btn-transition-speed;
 
 	&:hover,
-	&:focus,
+	// &:focus,
 	&:active {
 		background-color: $primary-color-dark !important;
 		border-color: $primary-color-dark !important;
 		color: $primary-color-light !important;
 		box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.15);
+	}
+
+	&:focus {
+		background-color: $btn-primary-color;
+		// border-color: $btn-primary-color;
+		color: $primary-color-dark;
+		outline: none;
 	}
 }
 
