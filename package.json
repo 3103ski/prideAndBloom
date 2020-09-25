@@ -8,7 +8,7 @@
 	},
 	"scripts": {
 		"lite": "lite-server",
-		"copyfonts": "copyfiles -f node_modules/@fortawesome/fontawesome-free/webfonts/* dist/fonts",
+		"copyfonts": "copyfiles -f node_modules/@fortawesome/fontawesome-free/webfonts/* dist/webfonts",
 		"imagemin": "imagemin assets/* -o dist/assets",
 		"usemin": "usemin index.html -d dist --htmlmin -o dist/index.html && usemin about.html -d dist --htmlmin -o dist/about.html && usemin menu.html -d dist --htmlmin -o dist/menu.html",
 		"clean": "rimraf dist",
