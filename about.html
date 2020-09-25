@@ -5,12 +5,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Pride And Bloom: About Us</title>
 
+		<!-- build:css css/main.css -->
+
 		<!-- Bootstrap -->
 		<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
 
-		<!-- Icons -->
+		<!-- css packages -->
 		<link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css" />
-		<link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/webfonts/" />
+		<link rel="stylesheet" href="node_modules/hover.css/css/hover.css" />
 
 		<!-- Google Fonts -->
 		<link
@@ -21,6 +23,7 @@
 
 		<!-- Local Styles -->
 		<link rel="stylesheet" href="css/styles.css" />
+		<!-- endbuild -->
 	</head>
 
 	<body>
@@ -29,7 +32,7 @@
 		<!-- ---------- -->
 		<nav class="navbar navbar-light bg-light fixed-top pill-nav">
 			<a href="/index.html" class="ml-2 mr-3"><img id="nav-logo" src="/assets/logo-png2.png" alt="" /></a>
-			<a data-target="#reservationModal" data-toggle="modal" class="mr-auto res-btn">MAKE <strong>RESERVATIONS</strong></a>
+			<a data-target="#reservationModal" data-toggle="modal" class="mr-auto res-btn hvr-bounce-to-bottom">MAKE <strong>RESERVATIONS</strong></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 				<i class="fas fa-bars"></i>
 			</button>
@@ -80,7 +83,7 @@
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus fuga nemo atque vel inventore nam dolores sapiente ex harum molestiae architecto voluptatem, iusto sint iure,
 							omnis obcaecati hic neque tenetur.
 						</p>
-						<button class="btn pill btn-primary swap-about">Our Ingredients</button>
+						<button class="btn pill btn-primary swap-about hvr-float-shadow">Our Ingredients</button>
 					</div>
 					<!-- Fresh Ingredients Content _ Hidden by default -->
 					<div class="about-details about-ingredients">
@@ -90,7 +93,7 @@
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus fuga nemo atque vel inventore nam dolores sapiente ex harum molestiae architecto voluptatem, iusto sint iure,
 							omnis obcaecati hic neque tenetur.
 						</p>
-						<button class="btn pill btn-primary swap-about">Our Chef</button>
+						<button class="btn pill btn-primary swap-about hvr-float-shadow">Our Chef</button>
 					</div>
 				</div>
 			</div>
@@ -101,16 +104,15 @@
 		<!-- ------ -->
 		<footer class="container-fluid tall-footer">
 			<div class="row footer-row mx-auto d-flex align-items-center h-100 text-center">
-				<!-- Reservation & Social -->
+				<!-- Reservation and social -->
 				<div class="col col-12 col-md-4 d-flex justify-content-center flex-column">
 					<div class="row">
-						<!-- reservation button -->
-						<a data-toggle="modal" data-target="#reservationModal" class="mx-auto res-btn">MAKE <strong>RESERVATIONS</strong></a>
+						<a type="button" data-target="#reservationModal" data-toggle="modal" class="mx-auto fotter-res res-btn hvr-bounce-to-bottom">MAKE <strong>RESERVATIONS</strong></a>
 					</div>
 					<div class="row d-flex m-2">
-						<i class="fab fa-twitter ml-auto"></i>
-						<i class="fab fa-facebook-square mx-3"></i>
-						<i class="fab fa-instagram-square mr-auto"></i>
+						<i class="fab fa-twitter ml-auto hvr-grow-rotate"></i>
+						<i class="fab fa-facebook-square mx-3 hvr-grow-rotate"></i>
+						<i class="fab fa-instagram-square mr-auto hvr-grow-rotate"></i>
 					</div>
 				</div>
 
@@ -123,20 +125,22 @@
 					<p>Sunday: 10am - 8pm</p>
 				</div>
 
-				<!-- Address & Menu Link -->
+				<!-- Address & Menu -->
 				<div class="col col-12 col-md-4 d-flex align-items-center justify-content-center flex-column">
 					<h2>Location</h2>
 					<p>97 River Street</p>
 					<p>Holly Springs, NC 27540</p>
-					<a href="/menu.html" class="f-menu-link">Menu</a>
+					<a type="button" href="/menu.html" class="f-menu-link hvr-bounce-to-top">Menu</a>
 				</div>
 			</div>
 		</footer>
 
 		<!-- SCRIPTS -->
+		<!-- build:js js/main.js -->
 		<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
 		<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
 		<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 		<script src="js/customJs.js"></script>
+		<!-- endbuild -->
 	</body>
 </html>

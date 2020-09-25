@@ -5,12 +5,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Pride And Bloom</title>
 
+		<!-- build:css css/main.css -->
 		<!-- Bootstrap -->
 		<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
 
-		<!-- Icons -->
+		<!-- css Packages -->
 		<link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css" />
-		<!-- <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/webfonts/" /> -->
+		<link rel="stylesheet" href="node_modules/hover.css/css/hover.css" />
 
 		<!-- Google Fonts -->
 		<link
@@ -21,13 +22,15 @@
 
 		<!-- Local Styles -->
 		<link rel="stylesheet" href="css/styles.css" />
+
+		<!-- endbuild -->
 	</head>
 
 	<body>
 		<!-- ---------- -->
 		<!-- NAVIGATION -->
 		<!-- ---------- -->
-		<a type="button" data-toggle="modal" data-target="#reservationModal" href="#" class="mx-auto res-btn fixed-res">MAKE <strong>RESERVATIONS</strong></a>
+		<a type="button" data-toggle="modal" data-target="#reservationModal" href="#" class="mx-auto res-btn fixed-res hvr-bounce-to-bottom">MAKE <strong>RESERVATIONS</strong></a>
 		<nav class="navbar navbar-light bg-transparent fixed-top pill-nav">
 			<button
 				class="navbar-toggler ml-auto hidden-toggler"
@@ -96,7 +99,7 @@
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem aspernatur eaque, officia, neque expedita pariatur numquam id corporis sequi fugit minus temporibus eos cupiditate perspiciatis
 						dolorem, tenetur deleniti excepturi iusto!
 					</p>
-					<a href="/about.html" class="btn btn-primary pill">Get To Know Us</a>
+					<a href="/about.html" class="btn btn-primary pill hvr-float-shadow">Get To Know Us</a>
 				</div>
 
 				<!-- Info Pic -->
@@ -117,7 +120,7 @@
 					<h1 class="mr-sm-auto ml-sm-2">Let us show you</h1>
 					<h1 class="ml-sm-auto mr-sm-5">real comfort food</h1>
 					<!-- Modal Button -->
-					<button type="button" data-target="#reservationModal" data-toggle="modal" class="btn btn-primary pill mt-3">Make Reservation</button>
+					<button type="button" data-target="#reservationModal" data-toggle="modal" class="btn btn-primary pill mt-3 hvr-float-shadow">Make Reservation</button>
 				</div>
 			</div>
 		</div>
@@ -146,7 +149,7 @@
 						</p>
 						<!-- MENU link -->
 						<a href="/menu.html">
-							<button class="btn btn-primary pill">EXPLORE MENU</button>
+							<button class="btn btn-primary pill hvr-float-shadow">EXPLORE MENU</button>
 						</a>
 					</div>
 				</div>
@@ -161,12 +164,12 @@
 				<!-- Reservation and social -->
 				<div class="col col-12 col-md-4 d-flex justify-content-center flex-column">
 					<div class="row">
-						<a type="button" data-target="#reservationModal" data-toggle="modal" class="mx-auto fotter-res res-btn">MAKE <strong>RESERVATIONS</strong></a>
+						<a type="button" data-target="#reservationModal" data-toggle="modal" class="mx-auto fotter-res res-btn hvr-bounce-to-bottom">MAKE <strong>RESERVATIONS</strong></a>
 					</div>
 					<div class="row d-flex m-2">
-						<i class="fab fa-twitter ml-auto"></i>
-						<i class="fab fa-facebook-square mx-3"></i>
-						<i class="fab fa-instagram-square mr-auto"></i>
+						<i class="fab fa-twitter ml-auto hvr-grow-rotate"></i>
+						<i class="fab fa-facebook-square mx-3 hvr-grow-rotate"></i>
+						<i class="fab fa-instagram-square mr-auto hvr-grow-rotate"></i>
 					</div>
 				</div>
 
@@ -184,15 +187,17 @@
 					<h2>Location</h2>
 					<p>97 River Street</p>
 					<p>Holly Springs, NC 27540</p>
-					<a type="button" href="/menu.html" class="f-menu-link">Menu</a>
+					<a type="button" href="/menu.html" class="f-menu-link hvr-bounce-to-top">Menu</a>
 				</div>
 			</div>
 		</footer>
 
 		<!-- SCRIPTS -->
+		<!-- build:js js/main.js -->
 		<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
 		<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
 		<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 		<script src="js/customJs.js"></script>
+		<!-- endbuild -->
 	</body>
 </html>

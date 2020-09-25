@@ -5,12 +5,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>P&B Menu</title>
 
+		<!-- build:css css/main.css -->
 		<!-- Bootstrap -->
 		<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
 
-		<!-- Icons -->
+		<!-- css Packages-->
 		<link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css" />
-		<link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/webfonts/" />
+		<link rel="stylesheet" href="node_modules/hover.css/css/hover.css" />
 
 		<!-- Google Fonts -->
 		<link
@@ -21,6 +22,7 @@
 
 		<!-- Local Styles -->
 		<link rel="stylesheet" href="css/styles.css" />
+		<!-- endbuild -->
 	</head>
 	<body>
 		<!-- ---------- -->
@@ -28,7 +30,7 @@
 		<!-- ---------- -->
 		<nav class="navbar navbar-light bg-light fixed-top pill-nav">
 			<a href="/index.html" class="ml-2"><img id="nav-logo" src="/assets/logo-png2.png" alt="" /></a>
-			<a data-toggle="modal" data-target="#reservationModal" class="mx-auto res-btn">MAKE <strong>RESERVATIONS</strong></a>
+			<a data-toggle="modal" data-target="#reservationModal" class="mx-auto res-btn hvr-bounce-to-bottom">MAKE <strong>RESERVATIONS</strong></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 				<i class="fas fa-bars"></i>
 			</button>
@@ -71,7 +73,7 @@
 			<div class="pic-menu-selctor see-appetizer">
 				<div class="pic-overlay"></div>
 				<h2>Appetizers</h2>
-				<i class="menu-back app-back fas fa-arrow-circle-left"></i>
+				<i class="menu-back app-back fas fa-arrow-circle-left hvr-backward"></i>
 			</div>
 
 			<!-- menu __ no width by default -->
@@ -140,7 +142,7 @@
 			<div class="pic-menu-selctor see-brunch">
 				<div class="pic-overlay"></div>
 				<h2>Brunch</h2>
-				<i class="menu-back brunch-back fas fa-arrow-circle-left"></i>
+				<i class="menu-back brunch-back fas fa-arrow-circle-left hvr-backward"></i>
 			</div>
 
 			<!-- menu __ no width by default -->
@@ -209,7 +211,7 @@
 			<div class="pic-menu-selctor see-dinner">
 				<div class="pic-overlay"></div>
 				<h2>Dinner</h2>
-				<i class="menu-back dinner-back fas fa-arrow-circle-left"></i>
+				<i class="menu-back dinner-back fas fa-arrow-circle-left hvr-backward"></i>
 			</div>
 
 			<!-- menu __ no width by default -->
@@ -278,7 +280,7 @@
 			<div class="pic-menu-selctor see-drinks">
 				<div class="pic-overlay"></div>
 				<h2>Drinks</h2>
-				<i class="menu-back drinks-back fas fa-arrow-circle-left"></i>
+				<i class="menu-back drinks-back fas fa-arrow-circle-left hvr-backward"></i>
 			</div>
 
 			<!-- menu __ no width by default -->
@@ -343,16 +345,18 @@
 		<!-- FOOTER -->
 		<footer class="short-footer d-flex align-items-center justify-content-center">
 			<div class="social-icons">
-				<i class="my-auto fab fa-twitter ml-auto"></i>
-				<i class="my-auto fab fa-facebook-square mx-3"></i>
-				<i class="my-auto fab fa-instagram-square mr-auto"></i>
+				<i class="my-auto fab fa-twitter ml-auto hvr-grow-rotate"></i>
+				<i class="my-auto fab fa-facebook-square mx-3 hvr-grow-rotate"></i>
+				<i class="my-auto fab fa-instagram-square mr-auto hvr-grow-rotate"></i>
 			</div>
 		</footer>
 
 		<!-- SCRIPTS -->
+		<!-- build:js js/main.js -->
 		<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
 		<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
 		<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 		<script src="js/customJs.js"></script>
+		<!-- endbuild -->
 	</body>
 </html>

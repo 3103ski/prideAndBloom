@@ -13,7 +13,7 @@
 		"watch:scss": "onchange 'sass/*.scss' -- npm run scss",
 		"watch:all": "parallelshell 'npm run watch:scss' 'npm run lite' ",
 		"start": "npm run watch:all",
-		"build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin",
+		"build": "npm run clean && npm run imagemin && npm run copyfiles && npm run usemin",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"repository": {
@@ -39,6 +39,7 @@
 	"dependencies": {
 		"@fortawesome/fontawesome-free": "^5.14.0",
 		"bootstrap": "^4.5.0",
+		"hover.css": "^2.3.2",
 		"jquery": "^3.5.1",
 		"popper.js": "^1.16.1"
 	}

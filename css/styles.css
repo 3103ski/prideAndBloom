@@ -73,6 +73,18 @@ p {
 .pic-overlay {
   background-color: rgba(248, 255, 242, 0.2); }
 
+.hvr-bounce-to-bottom,
+.hvr-bounce-to-top,
+.hvr-bounce-to-right,
+.hvr-bounce-to-left {
+  transition: 0.3s !important; }
+  .hvr-bounce-to-bottom:before,
+  .hvr-bounce-to-top:before,
+  .hvr-bounce-to-right:before,
+  .hvr-bounce-to-left:before {
+    transition: 0.3s !important;
+    background: #7c8079 !important; }
+
 /* -------------------- */
 /*  Bootstrap Override  */
 /* -------------------- */
@@ -141,14 +153,14 @@ p {
   padding-top: 0.5rem; }
   .pill-nav .navbar-nav .nav-link {
     background-color: rgba(238, 240, 233, 0.9);
-    padding: 0.3rem 1rem;
+    padding: 0.45rem 1.4rem;
     margin: 0.25rem auto;
     border-radius: 20px;
     letter-spacing: 0.15rem;
     transition: 0.15s;
     border: solid 1px #7c8079; }
     .pill-nav .navbar-nav .nav-link:hover {
-      padding: 0.3rem 1.4rem;
+      padding: 0.45rem 1.8rem;
       letter-spacing: 0.18rem; }
   .pill-nav .navbar-nav .nav-link:hover,
   .pill-nav .navbar-nav .nav-link.active {
@@ -173,6 +185,8 @@ footer {
   background-color: rgba(238, 240, 233, 0.9); }
   footer i {
     color: #7c8079; }
+    footer i:hover {
+      cursor: pointer; }
 
 .tall-footer {
   height: 280px; }
@@ -290,8 +304,6 @@ footer {
     .menu-container .pic-menu-selctor .show-back {
       opacity: 100%;
       z-index: 100; }
-    .menu-container .pic-menu-selctor .menu-back:hover {
-      margin-right: 45px; }
   .menu-container .food-menu {
     background-color: #7c8079;
     height: 100%;

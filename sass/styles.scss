@@ -111,6 +111,19 @@ p {
 	background-color: rgba(248, 255, 242, 0.2);
 }
 
+// hover.css
+
+.hvr-bounce-to-bottom,
+.hvr-bounce-to-top,
+.hvr-bounce-to-right,
+.hvr-bounce-to-left {
+	transition: 0.3s !important;
+	&:before {
+		transition: 0.3s !important;
+		background: $primary-color-dark !important;
+	}
+}
+
 /* -------------------- */
 /*  Bootstrap Override  */
 /* -------------------- */
@@ -196,7 +209,7 @@ p {
 		padding-top: 0.5rem;
 		.nav-link {
 			background-color: $primary-color-light;
-			padding: 0.3rem 1rem;
+			padding: 0.45rem 1.4rem;
 			margin: 0.25rem auto;
 			border-radius: 20px;
 			letter-spacing: 0.15rem;
@@ -204,7 +217,7 @@ p {
 			border: solid 1px $primary-color-dark;
 
 			&:hover {
-				padding: 0.3rem 1.4rem;
+				padding: 0.45rem 1.8rem;
 				letter-spacing: 0.18rem;
 			}
 		}
@@ -240,6 +253,9 @@ footer {
 	background-color: $primary-color-light;
 	i {
 		color: $primary-color-dark;
+		&:hover {
+			cursor: pointer;
+		}
 	}
 }
 
@@ -384,14 +400,10 @@ footer {
 			margin-top: 1rem;
 			font-size: 4rem;
 			color: $primary-color-light;
-			// margin-right: 10px;
 		}
 		.show-back {
 			opacity: 100%;
 			z-index: 100;
-		}
-		.menu-back:hover {
-			margin-right: 45px;
 		}
 	}
 
