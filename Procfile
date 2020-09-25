@@ -1,1 +1,1 @@
-web: node index.html
+web: /dist/index.html
