@@ -429,6 +429,7 @@ footer {
 .about-content-container {
   position: relative;
   height: 90vh;
+  max-height: 670px;
   background-image: url("/assets/pic_group-feast.jpg");
   background-size: cover;
   background-position: center;
@@ -436,6 +437,11 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: flex-end; }
+  @media screen and (max-width: 767px) {
+    .about-content-container {
+      max-height: unset;
+      height: unset;
+      padding-bottom: 35px; } }
   .about-content-container .row-content {
     display: flex;
     align-items: flex-end;
@@ -446,6 +452,10 @@ footer {
       z-index: 2;
       transition: 0.3s;
       transition-timing-function: ease-out; }
+    @media screen and (max-width: 767px) {
+      .about-content-container .row-content .about-pic,
+      .about-content-container .row-content .about-content {
+        width: 100%; } }
     .about-content-container .row-content .about-pic {
       height: 500px;
       background-image: url("/assets/pic_chef_ls.jpg");
@@ -491,3 +501,13 @@ footer {
       background-image: url("/assets/pic_ingredients2.jpg");
       border-top-left-radius: 0px;
       border-top-right-radius: 15px; }
+    @media screen and (max-width: 767px) {
+      .about-content-container .row-content .about-pic {
+        height: 300px;
+        border-top-right-radius: 20px; }
+      .about-content-container .row-content .about-content {
+        border-top-right-radius: 0; }
+      .about-content-container .row-content .move-pic {
+        margin-left: unset; }
+      .about-content-container .row-content .move-card {
+        margin-left: unset; } }

@@ -596,6 +596,7 @@ footer {
 .about-content-container {
 	position: relative;
 	height: 90vh;
+	max-height: 670px;
 	background-image: url('/assets/pic_group-feast.jpg');
 	background-size: cover;
 	background-position: center;
@@ -603,11 +604,15 @@ footer {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
+	@media screen and (max-width: 767px) {
+		max-height: unset;
+		height: unset;
+		padding-bottom: 35px;
+	}
 
 	.row-content {
 		display: flex;
 		align-items: flex-end;
-		// max-width: 1200px;
 		padding: 80px 10% 0 10%;
 		.about-pic,
 		.about-content {
@@ -615,6 +620,12 @@ footer {
 			z-index: 2;
 			transition: $about-page-transitions;
 			transition-timing-function: $about-timing-function;
+		}
+		@media screen and (max-width: 767px) {
+			.about-pic,
+			.about-content {
+				width: 100%;
+			}
 		}
 		.about-pic {
 			height: 500px;
@@ -670,6 +681,22 @@ footer {
 			background-image: url('/assets/pic_ingredients2.jpg');
 			border-top-left-radius: 0px;
 			border-top-right-radius: 15px;
+		}
+
+		@media screen and (max-width: 767px) {
+			.about-pic {
+				height: 300px;
+				border-top-right-radius: $card-radius;
+			}
+			.about-content {
+				border-top-right-radius: 0;
+			}
+			.move-pic {
+				margin-left: unset;
+			}
+			.move-card {
+				margin-left: unset;
+			}
 		}
 	}
 }
