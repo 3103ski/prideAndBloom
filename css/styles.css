@@ -187,6 +187,22 @@ p {
   .navbar-toggler:focus {
     outline: none; }
 
+/* --------------------- */
+/*   Reservation modal   */
+/* --------------------- */
+.modal h5,
+.modal .btn-primary {
+  color: rgba(238, 240, 233, 0.9); }
+
+.modal .modal-header,
+.modal .btn-primary {
+  background-color: #7c8079; }
+
+.modal .btn-secondary {
+  background-color: rgba(238, 240, 233, 0.9);
+  border-color: rgba(238, 240, 233, 0.9);
+  color: #7c8079; }
+
 /* ------------- */
 /*     FOOTER    */
 /* ------------- */
@@ -441,16 +457,15 @@ footer {
         width: 100%; }
         .menu-container .pic-menu-selctor h2 {
           margin-top: 20px; }
-      .menu-container .selector-hide-left {
-        margin-left: unset;
+      .menu-container .selector-hide-left,
+      .menu-container .selector-hide-right {
         height: 0%;
         overflow: hidden;
         opacity: 0; }
+      .menu-container .selector-hide-left {
+        margin-left: unset; }
       .menu-container .selector-hide-right {
-        margin-right: unset;
-        opacity: 0;
-        height: 0%;
-        overflow: hidden; }
+        margin-right: unset; }
       .menu-container .show-menu {
         width: 100%;
         height: calc(85vh - 50px);

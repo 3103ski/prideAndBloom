@@ -259,6 +259,26 @@ p {
 	}
 }
 
+/* --------------------- */
+/*   Reservation modal   */
+/* --------------------- */
+
+.modal {
+	h5,
+	.btn-primary {
+		color: $primary-color-light;
+	}
+	.modal-header,
+	.btn-primary {
+		background-color: $primary-color-dark;
+	}
+	.btn-secondary {
+		background-color: $primary-color-light;
+		border-color: $primary-color-light;
+		color: $primary-color-dark;
+	}
+}
+
 /* ------------- */
 /*     FOOTER    */
 /* ------------- */
@@ -614,19 +634,18 @@ footer {
 				margin-top: 20px;
 			}
 		}
-		.selector-hide-left {
-			margin-left: unset;
-			// margin-top: -25vh;
+
+		.selector-hide-left,
+		.selector-hide-right {
 			height: 0%;
 			overflow: hidden;
 			opacity: 0;
 		}
+		.selector-hide-left {
+			margin-left: unset;
+		}
 		.selector-hide-right {
 			margin-right: unset;
-			opacity: 0;
-			// margin-bottom: -25vh;
-			height: 0%;
-			overflow: hidden;
 		}
 		.show-menu {
 			width: 100%;
