@@ -37,6 +37,7 @@ h3,
 h4,
 h5,
 h6,
+li,
 p {
 	color: $primary-color-dark;
 	font-weight: 300;
@@ -109,6 +110,12 @@ p {
 
 .pic-overlay {
 	background-color: rgba(248, 255, 242, 0.2);
+}
+
+@media screen and (max-width: 576px) {
+	.xs-xtra-light-overlay {
+		background-color: #f0f2ebb0 !important;
+	}
 }
 
 // hover.css
@@ -267,15 +274,19 @@ footer {
 }
 
 .tall-footer {
-	min-height: 280px;
-	padding: 20px 0;
+	padding: 40px 0;
 	.footer-row {
 		max-width: 1200px;
+		h2 {
+			margin-bottom: 10px;
+			font-size: 1.7rem;
+		}
 		p {
-			line-height: 0.5rem;
+			margin: 0;
 		}
 		i {
 			font-size: 2.5rem;
+			margin-top: 15px;
 		}
 		.f-menu-link {
 			color: $primary-color-dark;
@@ -283,7 +294,7 @@ footer {
 			letter-spacing: 0.12rem;
 			border: solid 2px $primary-color-dark;
 			padding: 0.2rem 0.8rem;
-			margin-top: 0.5rem;
+			margin-top: 15px;
 			transition: $btn-transition-speed;
 			&:hover {
 				text-decoration: none;
@@ -294,6 +305,13 @@ footer {
 		@media screen and (max-width: 767px) {
 			.footer-col {
 				margin: 20px 0;
+			}
+		}
+
+		ul {
+			padding: 0;
+			li {
+				list-style: none;
 			}
 		}
 	}
@@ -319,6 +337,7 @@ footer {
 	background-size: cover;
 	height: 100vh;
 	margin: 0;
+	position: relative;
 	h1 {
 		letter-spacing: 0.23rem;
 		font-size: 4rem;
@@ -372,17 +391,22 @@ footer {
 .food-pic {
 	height: 40vw;
 	max-height: 390px;
+	min-height: 200px;
 	background-size: cover;
 	background-position: right;
 	width: 100%;
+	border-top-left-radius: $card-radius;
+	border-top-right-radius: $card-radius;
 }
 
 .cook-pic {
 	background-image: url('/assets/pic_chef_ls.jpg');
 }
+
 .food-pic {
 	background-image: url('/assets/pic_ingredients2.jpg');
 }
+
 @media screen and (max-width: 767px) {
 	.cook-pic {
 		background-position: top;
@@ -391,19 +415,24 @@ footer {
 @media screen and (min-width: 768px) {
 	.pic-right {
 		margin-left: -25px;
+		margin-right: 12px;
 		margin-top: 0%;
 	}
 
 	.pic-left {
+		border-top-right-radius: 0;
 		margin-right: -25px;
 	}
 
 	.left-round {
 		border-top-left-radius: $card-radius;
+		margin-left: 12px;
 		border-bottom-left-radius: $card-radius;
+		border-top-right-radius: 0;
 	}
 
 	.right-round {
+		border-top-left-radius: 0;
 		border-top-right-radius: $card-radius;
 		border-bottom-right-radius: $card-radius;
 	}
