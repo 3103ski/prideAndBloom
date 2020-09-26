@@ -433,7 +433,6 @@ footer {
         overflow: hidden; }
         .menu-container .food-menu .item-container {
           min-width: 75vw;
-          height: 85%;
           overflow-y: scroll;
           padding: 10px 0;
           overflow-x: hidden; }
@@ -464,6 +463,10 @@ footer {
           font-size: 0.8rem;
           opacity: 0;
           margin-top: -2rem; } }
+
+@media screen and (max-width: 767px) {
+  .short-footer {
+    position: relative; } }
 
 /* ------------ */
 /*  ABOUT PAGE  */
