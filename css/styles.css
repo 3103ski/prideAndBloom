@@ -433,21 +433,25 @@ footer {
         overflow: hidden; }
         .menu-container .food-menu .item-container {
           min-width: 75vw;
-          height: 80%;
+          height: 100%;
           overflow-y: scroll;
           padding: 10px 0;
           overflow-x: hidden; }
       .menu-container .pic-menu-selctor {
-        height: calc(25vh - 27px);
+        height: 25%;
         width: 100%; }
         .menu-container .pic-menu-selctor h2 {
           margin-top: 20px; }
       .menu-container .selector-hide-left {
         margin-left: unset;
-        margin-top: -25vh; }
+        height: 0%;
+        overflow: hidden;
+        opacity: 0; }
       .menu-container .selector-hide-right {
         margin-right: unset;
-        margin-bottom: -25vh; }
+        opacity: 0;
+        height: 0%;
+        overflow: hidden; }
       .menu-container .show-menu {
         width: 100%;
         height: calc(85vh - 50px);

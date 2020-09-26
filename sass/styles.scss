@@ -18,7 +18,8 @@ $card-radius: 20px;
 // menu page
 $menu-transition: 0.25s;
 $menu-timing-function: ease-in-out;
-$selector-sm-height: calc(25vh - 27px);
+$selector-sm-height: 25%;
+// $selector-sm-height: calc(25vh - 39px);
 
 // about page
 $about-page-transitions: 0.3s;
@@ -600,7 +601,7 @@ footer {
 			overflow: hidden;
 			.item-container {
 				min-width: 75vw;
-				height: 80%;
+				height: 100%;
 				overflow-y: scroll;
 				padding: 10px 0;
 				overflow-x: hidden;
@@ -615,11 +616,17 @@ footer {
 		}
 		.selector-hide-left {
 			margin-left: unset;
-			margin-top: -25vh;
+			// margin-top: -25vh;
+			height: 0%;
+			overflow: hidden;
+			opacity: 0;
 		}
 		.selector-hide-right {
 			margin-right: unset;
-			margin-bottom: -25vh;
+			opacity: 0;
+			// margin-bottom: -25vh;
+			height: 0%;
+			overflow: hidden;
 		}
 		.show-menu {
 			width: 100%;
