@@ -488,8 +488,7 @@ footer {
 /* ------------ */
 .about-content-container {
   position: relative;
-  height: 90vh;
-  max-height: 670px;
+  min-height: 85vh;
   background-image: url("/assets/pic_group-feast.jpg");
   background-size: cover;
   background-position: center;
@@ -517,7 +516,7 @@ footer {
       .about-content-container .row-content .about-content {
         width: 100%; } }
     .about-content-container .row-content .about-pic {
-      height: 500px;
+      height: 70vh;
       background-image: url("/assets/pic_chef_ls.jpg");
       background-size: cover;
       background-position: center;
@@ -526,7 +525,7 @@ footer {
       z-index: 1000;
       position: relative; }
     .about-content-container .row-content .about-content {
-      height: 480px;
+      min-height: 68vh;
       background-color: rgba(238, 240, 233, 0.9);
       position: relative;
       display: flex;
@@ -563,8 +562,10 @@ footer {
       border-top-right-radius: 15px; }
     @media screen and (max-width: 767px) {
       .about-content-container .row-content .about-pic {
-        height: 300px;
-        border-top-right-radius: 20px; }
+        height: 340px;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+        background-position: top; }
       .about-content-container .row-content .about-content {
         border-top-right-radius: 0; }
       .about-content-container .row-content .move-pic {
