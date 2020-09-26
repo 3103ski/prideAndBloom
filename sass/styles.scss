@@ -55,10 +55,6 @@ p {
 	font-weight: 200;
 }
 
-button {
-	background-color: transparent !important;
-}
-
 :focus {
 	outline: none !important;
 }
@@ -79,14 +75,10 @@ button {
 	margin-right: 20% !important;
 }
 
-.left-round {
-	border-top-left-radius: $card-radius;
-	border-bottom-left-radius: $card-radius;
-}
-
-.right-round {
-	border-top-right-radius: $card-radius;
-	border-bottom-right-radius: $card-radius;
+.row-1200 {
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .row-content {
@@ -275,7 +267,8 @@ footer {
 }
 
 .tall-footer {
-	height: 280px;
+	min-height: 280px;
+	padding: 20px 0;
 	.footer-row {
 		max-width: 1200px;
 		p {
@@ -298,6 +291,11 @@ footer {
 				color: $primary-color-light;
 			}
 		}
+		@media screen and (max-width: 767px) {
+			.footer-col {
+				margin: 20px 0;
+			}
+		}
 	}
 }
 
@@ -315,6 +313,7 @@ footer {
 /* HOME PAGE */
 /* --------- */
 
+// Jubmotron
 .homeJumbo {
 	background-image: url('/assets/pic_cuttingBoard.jpg');
 	background-size: cover;
@@ -336,6 +335,7 @@ footer {
 	}
 }
 
+// Reservation Banner
 .banner {
 	background-image: url('/assets/pic_banner.jpg');
 	background-size: cover;
@@ -345,21 +345,80 @@ footer {
 	position: relative;
 }
 
+.col-container {
+	max-width: 600px;
+}
+
+// Quote
+
 .quote {
 	letter-spacing: 0.25rem;
 	line-height: 3.4rem;
 }
 
+// Cards and Pics
+
 .pic-right {
 	padding: 0;
-	margin-left: -25px;
 	z-index: -1;
 }
 
 .pic-left {
 	padding: 0;
-	margin-right: -20px;
 	z-index: -1;
+}
+
+.cook-pic,
+.food-pic {
+	height: 40vw;
+	max-height: 390px;
+	background-size: cover;
+	background-position: right;
+	width: 100%;
+}
+
+.cook-pic {
+	background-image: url('/assets/pic_chef_ls.jpg');
+}
+.food-pic {
+	background-image: url('/assets/pic_ingredients2.jpg');
+}
+@media screen and (max-width: 767px) {
+	.cook-pic {
+		background-position: top;
+	}
+}
+@media screen and (min-width: 768px) {
+	.pic-right {
+		margin-left: -25px;
+		margin-top: 0%;
+	}
+
+	.pic-left {
+		margin-right: -25px;
+	}
+
+	.left-round {
+		border-top-left-radius: $card-radius;
+		border-bottom-left-radius: $card-radius;
+	}
+
+	.right-round {
+		border-top-right-radius: $card-radius;
+		border-bottom-right-radius: $card-radius;
+	}
+}
+
+@media screen and (min-width: 767px) and (max-width: 992px) {
+	.col-content-card {
+		padding: 4vw !important;
+		p {
+			font-size: 1.5vw;
+		}
+		h3 {
+			font-size: 3vw;
+		}
+	}
 }
 
 /* --------- */

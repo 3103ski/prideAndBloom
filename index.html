@@ -90,10 +90,10 @@
 		<!-- ------------------ -->
 		<!-- IDENTITY CONTAINER -->
 		<!-- ------------------ -->
-		<div class="container">
-			<div class="row row-content">
+		<div class="container-fluid">
+			<div class="row row-content row-1200">
 				<!-- Info card -->
-				<div class="col col-12 col-md-5 align-self-center col-content-card p-2 p-lg-5 text-right left-round">
+				<div class="col col-xs-12 col-md-6 order-1 order-md-0 align-self-center col-content-card px-4 py-5 p-lg-5 text-right left-round">
 					<h3 class="w-100">Take Pride & Bloom</h3>
 					<p>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem aspernatur eaque, officia, neque expedita pariatur numquam id corporis sequi fugit minus temporibus eos cupiditate perspiciatis
@@ -103,9 +103,9 @@
 				</div>
 
 				<!-- Info Pic -->
-				<div class="col col-12 col-sm-7 pic-right align-items-center d-flex">
+				<div class="col col-12 col-md-6 pic-right align-items-center d-flex">
 					<div class="pic-overlay"></div>
-					<img class="img-fluid right-round" src="/assets/pic_chef_ls.jpg" alt="" />
+					<div class="cook-pic right-round"></div>
 				</div>
 			</div>
 		</div>
@@ -116,9 +116,9 @@
 		<div class="container-fluid banner d-flex flex-column justify-content-center">
 			<div class="light-overlay"></div>
 			<div class="row">
-				<div class="col col-12 col-sm-6 offset-sm-6 d-flex flex-column align-items-center">
-					<h1 class="mr-sm-auto ml-sm-2">Let us show you</h1>
-					<h1 class="ml-sm-auto mr-sm-5">real comfort food</h1>
+				<div class="col col-12 col-sm-6 offset-sm-6 d-flex flex-column align-items-center col-container text-center text-lg-left">
+					<h1 class="mr-lg-auto">Let us show you</h1>
+					<h1 class="ml-lg-auto">real comfort food</h1>
 					<!-- Modal Button -->
 					<button type="button" data-target="#reservationModal" data-toggle="modal" class="btn btn-primary pill mt-3 hvr-float-shadow">Make Reservation</button>
 				</div>
@@ -128,30 +128,33 @@
 		<!-- ------------------------ -->
 		<!-- QUOTE AND MENU CONTAINER -->
 		<!-- ------------------------ -->
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row row-content align-items-center">
 				<div class="col-12 d-flex flex-column">
 					<h1 class="fontSatisfy w-100 quote">"The secret success in life is to eat what you like and let the food fight it out inside."</h1>
 					<h2 class="fontSatisfy ml-auto mr-20 quote">- Mark Twain</h2>
 				</div>
 			</div>
-			<div class="row">
-				<div class="row row-content">
-					<div class="col col-12 col-sm-7 pic-left d-flex align-items-center">
-						<div class="pic-overlay"></div>
-						<img class="img-fluid left-round" src="/assets/pic_food1.jpg" alt="" />
-					</div>
-					<div class="col col-12 col-sm-5 align-self-center col-content-card p-5 text-left right-round">
-						<h3 class="w-100">Best Rated Menu In LA</h3>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem aspernatur eaque, officia, neque expedita pariatur numquam id corporis sequi fugit minus temporibus eos cupiditate
-							perspiciatis dolorem, tenetur deleniti excepturi iusto!
-						</p>
-						<!-- MENU link -->
-						<a href="/menu.html">
-							<button class="btn btn-primary pill hvr-float-shadow">EXPLORE MENU</button>
-						</a>
-					</div>
+
+			<div class="row row-content row-1200">
+				<!-- info pic -->
+
+				<div class="col col-12 col-md-6 pic-left align-items-center d-flex">
+					<div class="pic-overlay"></div>
+					<div class="food-pic left-round"></div>
+				</div>
+
+				<!-- info card -->
+				<div class="col col-xs-12 col-md-6 align-self-center col-content-card px-4 py-5 p-lg-5 text-left right-round">
+					<h3 class="w-100">Best Rated Menu In LA</h3>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem aspernatur eaque, officia, neque expedita pariatur numquam id corporis sequi fugit minus temporibus eos cupiditate perspiciatis
+						dolorem, tenetur deleniti excepturi iusto!
+					</p>
+					<!-- MENU link -->
+					<a href="/menu.html">
+						<button class="btn btn-primary pill hvr-float-shadow">EXPLORE MENU</button>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -162,7 +165,7 @@
 		<footer class="container-fluid tall-footer">
 			<div class="row footer-row mx-auto d-flex align-items-center h-100 text-center">
 				<!-- Reservation and social -->
-				<div class="col col-12 col-md-4 d-flex justify-content-center flex-column">
+				<div class="col col-12 col-md-4 d-flex justify-content-center flex-column footer-col">
 					<div class="row">
 						<a data-target="#reservationModal" data-toggle="modal" class="mx-auto fotter-res res-btn hvr-bounce-to-bottom">MAKE <strong>RESERVATIONS</strong></a>
 					</div>
@@ -174,7 +177,7 @@
 				</div>
 
 				<!-- Store Hours -->
-				<div class="col col-12 col-md-4">
+				<div class="col col-12 col-md-4 footer-col">
 					<h2>Kitchen Hours</h2>
 					<p>Monday-Thursday: 3pm - 11pm</p>
 					<p>Friday: 3pm - 12:30am</p>
@@ -183,7 +186,7 @@
 				</div>
 
 				<!-- Address & Menu -->
-				<div class="col col-12 col-md-4 d-flex align-items-center justify-content-center flex-column">
+				<div class="col col-12 col-md-4 d-flex align-items-center justify-content-center flex-column footer-col">
 					<h2>Location</h2>
 					<p>97 River Street</p>
 					<p>Holly Springs, NC 27540</p>
