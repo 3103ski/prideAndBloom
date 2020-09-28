@@ -147,7 +147,6 @@ p {
 	transition: $btn-transition-speed;
 
 	&:hover,
-	// &:focus,
 	&:active {
 		background-color: $primary-color-dark !important;
 		border-color: $primary-color-dark !important;
@@ -157,7 +156,6 @@ p {
 
 	&:focus {
 		background-color: $btn-primary-color;
-		// border-color: $btn-primary-color;
 		color: $primary-color-dark;
 		outline: none;
 	}
